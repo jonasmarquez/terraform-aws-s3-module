@@ -4,9 +4,9 @@
 resource "aws_s3_bucket" "s3-bucket" {
   bucket = var.bucket_name # IMPORTANT! Conflict with bucket_prefix
   #bucket_prefix = var.bucket_prefix # IMPORTANT! Conflict with bucket
-  acl = "private"
-   # Versioning Configuration
-   versioning {
+  #acl = "private"
+  # Versioning Configuration
+  versioning {
     enabled = var.versioning
   }
 
