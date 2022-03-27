@@ -6,9 +6,9 @@ resource "aws_s3_bucket" "s3-bucket" {
   #bucket_prefix = var.bucket_prefix # IMPORTANT! Conflict with bucket
   #acl = "private"
   # Versioning Configuration
-  versioning {
+  /*versioning {
     enabled = var.versioning
-  }
+  }*/
 
   # Encryption Configuracion for S3 Bucket (needs KMS Key)
   /*server_side_encryption_configuration {
