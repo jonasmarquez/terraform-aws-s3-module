@@ -18,7 +18,7 @@ variable "bucket_prefix" {
 variable "tags" {
   type        = map(any)
   description = "(Optional) A mapping of tags to assign to the bucket."
-  default = {
+  default     = {
     Name        = "Testing"
     Environment = "Develop"
   }
@@ -60,6 +60,7 @@ variable "s3_count" {
 variable "kms_master_key_id" {
   type        = string
   description = "Encrypt KMS Key"
+  default     = null
 }
 variable "sse_algorithm" {
   type        = string
