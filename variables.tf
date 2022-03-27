@@ -8,7 +8,7 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "(Optional, Forces new resource) The name of the bucket. If omitted, Terraform will assign a random, unique name."
   type        = string
-  default     = "s3bucket"
+  default     = null
 }
 variable "bucket_prefix" {
   description = "(Optional, Forces new resource) Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket."
