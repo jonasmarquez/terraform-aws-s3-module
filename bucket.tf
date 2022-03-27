@@ -11,14 +11,14 @@ resource "aws_s3_bucket" "s3-bucket" {
   }
 
   # Encryption Configuracion for S3 Bucket (needs KMS Key)
-  server_side_encryption_configuration {
+  /*server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
         kms_master_key_id = var.kms_master_key_id
         sse_algorithm = var.sse_algorithm
       }
     }
-  }
+  }*/
 
   # TAGs of Resources
   tags = var.tags
