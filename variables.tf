@@ -8,17 +8,17 @@ variable "aws_region" {
 variable "bucket_name" {
   description = "(Optional, Forces new resource) The name of the bucket. If omitted, Terraform will assign a random, unique name."
   type        = string
-  default     = null
+  default     = "s3bucket"
 }
 variable "bucket_prefix" {
   description = "(Optional, Forces new resource) Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket."
   type        = string
-  default     = "test-"
+  default     = null
 }
 variable "tags" {
   type        = map(any)
   description = "(Optional) A mapping of tags to assign to the bucket."
-  default     = {
+  default = {
     Name        = "Testing"
     Environment = "Develop"
   }
@@ -60,7 +60,7 @@ variable "s3_count" {
 variable "kms_master_key_id" {
   type        = string
   description = "Encrypt KMS Key"
-  default     = null
+  default = null
 }
 variable "sse_algorithm" {
   type        = string
